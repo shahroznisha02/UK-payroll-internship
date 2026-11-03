@@ -49,7 +49,7 @@ def payslip(gross, code, cat):
             "net": round(gross - tax - ni, 2), "employer_ni": employer_ni(gross)} 
 
 
-if _name_ == "_main_":
+if  __name__ == "__main__":
     for code, cat in [("1257L", "A"), ("BR", "A"), ("1257L", "C")]:
         p = payslip(2500, code, cat)
         print(f"{code:6} Cat {cat} | tax {p['tax']:7.2f} | NI {p['ni']:6.2f} | net {p['net']:8.2f}")
